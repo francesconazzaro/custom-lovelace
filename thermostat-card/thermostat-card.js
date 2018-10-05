@@ -10,9 +10,6 @@ class ThermostatCard extends HTMLElement {
     let ambient_temperature = entity.attributes.current_temperature;
     if (config.ambient_temperature && hass.states[config.ambient_temperature])
       ambient_temperature = hass.states[config.ambient_temperature].state;
-    let target_temperature = entity.attributes.current_temperature;
-    if (config.target_temperature && hass.states[config.target_temperature])
-      target_temperature = hass.states[config.target_temperature].state;
     let hvac_state;
     if (config.hvac.attribute)
       hvac_state = entity.attributes[config.hvac.attribute];
